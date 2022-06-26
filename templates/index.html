@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Deep Learning in Text Classification</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+ </head>
+
+<body>
+  <div class="container">
+    <h1>
+      <center>Document Classifier - DCNN Model</center>
+    </h1>
+
+    {% block content %}
+    {% for message in form.docName.errors %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.docContent.errors %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    <form method=post>
+
+      {{ form.docName.label }}
+      {{ form.docName }}
+
+      {{ form.docContent.label }}
+      {{ form.docContent }}
+
+      {{ form.submit1}}
+    </form>
+    {% endblock %}
+
+  </div>
+</body>
+
+</html>
