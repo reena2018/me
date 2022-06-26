@@ -1,2 +1,2 @@
-web: gunicorn app:Document_Classifier
+web: gunicorn app:app
 
